@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './widgets/menu.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -11,14 +13,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('sss'),
-        ),
-        body: const Text('sds'),
+      home: const Scaffold(
+        appBar: Menu(),
+        body: Text('sds'),
       ),
     );
   }
