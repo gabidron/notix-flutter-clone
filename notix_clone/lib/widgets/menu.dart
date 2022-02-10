@@ -65,14 +65,16 @@ class Menu extends StatelessWidget implements PreferredSizeWidget {
                     ),
                   ),
                   style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          const Color.fromRGBO(255, 95, 55, 1)),
-                      foregroundColor:
-                          MaterialStateProperty.all<Color>(Colors.white),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(25.0),
-                              side: BorderSide(color: Colors.red)))),
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                        const Color.fromRGBO(255, 95, 55, 1)),
+                    foregroundColor:
+                        MaterialStateProperty.all<Color>(Colors.white),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25.0),
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ],
