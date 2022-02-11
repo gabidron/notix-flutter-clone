@@ -20,17 +20,32 @@ class _MenuItemState extends State<MenuItem> {
           setState(() => textColor = const Color.fromRGBO(255, 95, 55, 1)),
       onExit: (_) => setState(() => textColor = Colors.black),
       child: Padding(
-        padding: const EdgeInsets.only(right: 10),
-        child: Text(
-          widget.label,
-          style: TextStyle(
-            fontSize: 14,
-            fontFamily: 'Montserrat',
-            fontWeight: FontWeight.bold,
-            color: textColor,
-          ),
-        ),
-      ),
+          padding: const EdgeInsets.only(right: 15, top: 20),
+          child: FractionallySizedBox(
+            heightFactor: 1,
+            child: Stack(
+              children: [
+                Text(
+                  widget.label,
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.bold,
+                    color: textColor,
+                  ),
+                ),
+                Positioned(
+                  top: 30,
+                  child: Container(
+                    color: Colors.red,
+                    child: Text(
+                      widget.label,
+                    ),
+                  ),
+                )
+              ],
+            ),
+          )),
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './widgets/menu.dart';
+import './screens/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       home: const Scaffold(
         appBar: Menu(),
-        body: Text('sds'),
+        body: HomePage(),
       ),
     );
   }
